@@ -3,49 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MovieBookingsApp.MainPage"
              Title="Let's Get Started!">
-
-
     <VerticalStackLayout
         Spacing="25"
         Padding="30,50"
         VerticalOptions="Fill">
-
-        <!--<Image
-            Source="dotnet_bot.png"
-            SemanticProperties.Description="Cute dot net bot waving hi to you!"
-            HeightRequest="200"
-            HorizontalOptions="Center" />-->
-
-        <Label
-            Text="First Name"
-            FontSize="20"
-            HorizontalOptions="StartAndExpand" />
-
-        <Label
-            Text="Last Name"
-            FontSize="20"
-            HorizontalOptions="StartAndExpand" />
-
+        <VerticalStackLayout>
+            <Label
+                Text="First Name*"
+                FontSize="Body"
+                TextColor="{StaticResource Primary}"
+                HorizontalOptions="StartAndExpand" />
+            <Entry
+                Text="Required"
+                FontSize="Small"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label
+                Text="Last Name*"
+                FontSize="Body"
+                TextColor="{StaticResource Primary}"
+                HorizontalOptions="StartAndExpand" />
+            <Entry
+                Text="Required"
+                FontSize="Small"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label
+                Text="Email*"
+                FontSize="Body"
+                TextColor="{StaticResource Primary}"
+                HorizontalOptions="StartAndExpand" />
+            <Entry
+                Text="Required"
+                FontSize="Small"/>
+        </VerticalStackLayout>
         <Button
             x:Name="CreateAccount"
             Text="Create Account"
             HorizontalOptions="Center" />
-
-        <!--<Label
-            Text="Welcome to .NET Multi-platform App UI"
-            SemanticProperties.HeadingLevel="Level2"
-            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-            FontSize="18"
-            HorizontalOptions="Center" />-->
-
-        <!--<Button
-            x:Name="CounterBtn"
-            Text="Click me"
-            SemanticProperties.Hint="Counts the number of times you click"
-            Clicked="OnCounterClicked"
-            HorizontalOptions="Center" />-->
-
     </VerticalStackLayout>
-
-
 </ContentPage>

@@ -5,6 +5,11 @@
              x:Class="MovieBookingsApp.App">
     <Application.Resources>
         <ResourceDictionary>
+
+            <Color x:Key="Primary">#005ca0</Color>
+            <Color x:Key="PrimaryDark">#003694</Color>
+            <Color x:Key="Accent">#007dd9</Color>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
