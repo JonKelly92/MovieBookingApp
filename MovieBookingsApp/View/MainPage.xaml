@@ -3,43 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MovieBookingsApp.MainPage"
              Title="Let's Get Started!">
-    <VerticalStackLayout
-        Spacing="25"
-        Padding="30,50"
-        VerticalOptions="Fill">
-        <VerticalStackLayout>
-            <Label
-                Text="First Name*"
-                FontSize="Body"
-                TextColor="{StaticResource Primary}"
-                HorizontalOptions="StartAndExpand" />
-            <Entry
-                Text="Required"
-                FontSize="Small"/>
-        </VerticalStackLayout>
-        <VerticalStackLayout>
-            <Label
-                Text="Last Name*"
-                FontSize="Body"
-                TextColor="{StaticResource Primary}"
-                HorizontalOptions="StartAndExpand" />
-            <Entry
-                Text="Required"
-                FontSize="Small"/>
-        </VerticalStackLayout>
-        <VerticalStackLayout>
-            <Label
-                Text="Email*"
-                FontSize="Body"
-                TextColor="{StaticResource Primary}"
-                HorizontalOptions="StartAndExpand" />
-            <Entry
-                Text="Required"
-                FontSize="Small"/>
-        </VerticalStackLayout>
-        <Button
-            x:Name="CreateAccount"
-            Text="Create Account"
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Label
+        Text="MAIN PAGE"
+        FontSize="Title"
+        TextColor="{StaticResource Primary}"
+        HorizontalOptions="StartAndExpand" />
 </ContentPage>

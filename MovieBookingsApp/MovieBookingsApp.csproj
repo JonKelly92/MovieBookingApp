@@ -57,4 +57,10 @@
 	  <Folder Include="ViewModel\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="View\SignUp.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
