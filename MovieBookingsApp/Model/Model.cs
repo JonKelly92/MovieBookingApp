@@ -66,7 +66,16 @@ namespace MovieBookingsApp
         /// returns a UserInfo object, if user is not logged in strings will be empty. 
         /// </summary>
         /// <returns></returns>
-        public static UserInfo GetUserInfo() { return _userInfo; }
+        public static async Task<UserInfo> GetUserInfo() 
+        {
+            // call database 
+
+            _userInfo.FirstName = "JonTest";
+            _userInfo.LastName = "KellyTest";
+            _userInfo.Email = "test@gmail.com";
+
+            return _userInfo; 
+        }
 
         /// <summary>
         /// Returns a list of Movie objects containing details about each movie. 

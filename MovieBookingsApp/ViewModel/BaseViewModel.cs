@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+﻿
 
 namespace MovieBookingsApp
 {
@@ -15,7 +15,7 @@ namespace MovieBookingsApp
                 if(_isBusy == value) return;
 
                 _isBusy = value;
-                OnPropertyChanged(nameof(_isBusy));
+                OnPropertyChanged();
                 OnPropertyChanged(nameof(IsNotBusy));
             }
         }
@@ -29,7 +29,7 @@ namespace MovieBookingsApp
             {
                 if(_title == value) return;
                 _title = value;
-                OnPropertyChanged(nameof(_title));
+                OnPropertyChanged();
             }
         }
     }

@@ -5,11 +5,59 @@
              xmlns:viewmodel="clr-namespace:MovieBookingsApp"
              x:DataType="viewmodel:Account_ViewModel"
              Title="{Binding Title}">
-
-    <VerticalStackLayout>
-        <Label 
-            Text="User's Account page -- display their name and email here"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout
+        Spacing="15"
+        Padding="30,30"
+        VerticalOptions="Fill">
+        <Label
+            Text="Personal Information"
+            FontSize="Large"
+            TextColor="Black"
+            HorizontalOptions="StartAndExpand" />
+        <VerticalStackLayout
+            Spacing="10">
+            <Label
+                Text="First Name"
+                FontSize="Small"
+                TextColor="Black"
+                HorizontalOptions="StartAndExpand" />
+            <Frame
+                Padding="10"
+                CornerRadius="0">
+                <Label
+                    Text="{Binding FirstName}"
+                    FontSize="Small"/>
+            </Frame>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Spacing="10">
+            <Label
+                Text="Last Name"
+                FontSize="Small"
+                TextColor="Black"
+                HorizontalOptions="StartAndExpand" />
+            <Frame
+                Padding="10"
+                CornerRadius="0">
+                <Label
+                    Text="{Binding LastName}"
+                    FontSize="Small"/>
+            </Frame>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Spacing="10">
+            <Label
+                Text="Email"
+                FontSize="Small"
+                TextColor="Black"
+                HorizontalOptions="StartAndExpand" />
+            <Frame
+                Padding="10"
+                CornerRadius="0">
+                <Label
+                    Text="{Binding Email}"
+                    FontSize="Small"/>
+            </Frame>
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

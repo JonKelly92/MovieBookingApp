@@ -7,16 +7,59 @@ namespace MovieBookingsApp
     {
         private UserInfo _userinfo;
 
-       // public Command GetAccountInfoCommand { get; }
+        private string _firstName;
+        private string _lastName;
+        private string _email;
+
+        public string FirstName
+        {
+            get => _firstName;
+            set
+            {
+                if (_firstName == value) return;
+
+                _firstName = value;
+                OnPropertyChanged();
+            }
+        }
+        public string LastName
+        {
+            get => _lastName;
+            set
+            {
+                if (_lastName == value) return;
+
+                _lastName = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Email
+        {
+            get => _email;
+            set
+            {
+                if (_email == value) return;
+
+                _email = value;
+                OnPropertyChanged();
+            }
+        }
+
+        // public Command GetAccountInfoCommand { get; }
 
         public Account_ViewModel() 
         {
             Title = "Account";
 
-          //  GetAccountInfoCommand = new Command(async () => await GetAccountInfoAsync());
+            //  GetAccountInfoCommand = new Command(async () => await GetAccountInfoAsync());
         }
 
-        private async Task GetAccountInfoAsync()
+        public void LoadAccountInfo()
+        {
+            GetAccountInfoAsync();
+        }
+
+        private async void GetAccountInfoAsync()
         {
             if (IsBusy) return;
 
@@ -27,13 +70,24 @@ namespace MovieBookingsApp
                 if(!Model.IsSignedIn()) 
                 {
                     // TODO : ask user to sign in
-
-                    return;
                 }
 
-                _userinfo = Model.GetUserInfo();
+                _userinfo = await Model.GetUserInfo();
 
-                // TODO : Display user info 
+                if (!string.IsNullOrEmpty(_userinfo.FirstName))
+                    FirstName = _userinfo.FirstName;
+                else
+                    FirstName = "None";
+
+                if(!string.IsNullOrEmpty(_userinfo.LastName)) 
+                    LastName = _userinfo.LastName;
+                else
+                    LastName = "None";
+
+                if(!string.IsNullOrEmpty(_userinfo.Email))
+                    Email = _userinfo.Email;
+                else
+                    Email = "None";
             }
             catch (Exception ex)
             { 
