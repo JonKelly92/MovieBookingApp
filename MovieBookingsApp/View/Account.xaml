@@ -63,7 +63,6 @@
             HeightRequest="160"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Source="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/saimiri.jpg"
-            WidthRequest="160"/>
+            Source="https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Best-Nicolas-Cage-Movies.jpg"/>
     </VerticalStackLayout>
 </ContentPage>
