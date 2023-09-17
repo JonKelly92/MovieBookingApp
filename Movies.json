@@ -1,0 +1,37 @@
+[
+	{
+		"Name": "After Everything",
+		"LengthMin": = 0,
+		"ImageURI": = "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/AfterEverything.png"
+	},
+	{
+		"Name": "A Haunting in Venice",
+		"LengthMin": = 0,
+		"ImageURI": = "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/AHauntingInVenice.png"
+	},
+	{
+		"Name": "Barbie",
+		"LengthMin": = 0,
+		"ImageURI": = "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Barbie.png"
+	},
+	{
+		"Name": "Demeter",
+		"LengthMin": = 0,
+		"ImageURI": = "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Demeter.png"
+	},
+	{
+		"Name": "Grand Turismo",
+		"LengthMin": = 0,
+		"ImageURI": = "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/GrandTurismo.png"
+	},
+	{
+		"Name": "My Big Fat Greek Wedding 3",
+		"LengthMin": = 0,
+		"ImageURI": = "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/GreekWedding.png"
+	},
+	{
+		"Name": "The Meg 2",
+		"LengthMin": = 0,
+		"ImageURI": = "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png"
+	}	
+]

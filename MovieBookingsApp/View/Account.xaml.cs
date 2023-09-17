@@ -1,4 +1,3 @@
-using AndroidX.Lifecycle;
 
 namespace MovieBookingsApp;
 
@@ -20,6 +19,6 @@ public partial class Account : ContentPage
         base.OnNavigatedTo(args);
 
         // TODO : find a way to use binding instead? 
-        _viewModel.LoadAccountInfo();
+        _viewModel.OnNavigatedTo();
     }
 }

@@ -2,16 +2,29 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MovieBookingsApp.GetTickets"
-             Title="GetTickets">
+             xmlns:namespace="clr-namespace:MovieBookingsApp"
+             x:DataType="namespace:GetTickets_ViewModel"
+             Title="{Binding Title}">
     <VerticalStackLayout>
-        <Label 
-            Text="Movies and times listed here - clients can create bookings -- Will likely need to be a Navigation Page"
+        <CollectionView
+            ItemsSource="{Binding Movies}"
+            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="namespace:Movie">
+                    <Image Aspect="AspectFill"
+                        Source="{Binding ImageURI}"
+                        WidthRequest="125"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <!--<Label 
+            Text="Movies and times listed here - clients can create bookings - Will likely need to be a Navigation Page"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Image Aspect="AspectFill"
             HeightRequest="160"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Source="https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Best-Nicolas-Cage-Movies.jpg"/>
+            Source="https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png"/>-->
     </VerticalStackLayout>
 </ContentPage>

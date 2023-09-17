@@ -54,7 +54,7 @@ namespace MovieBookingsApp
             //  GetAccountInfoCommand = new Command(async () => await GetAccountInfoAsync());
         }
 
-        public void LoadAccountInfo()
+        public void OnNavigatedTo()
         {
             GetAccountInfoAsync();
         }
