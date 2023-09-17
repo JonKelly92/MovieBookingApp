@@ -99,6 +99,5 @@ namespace MovieBookingsApp
                 IsBusy = false;
             }
         }
-
     }
 }

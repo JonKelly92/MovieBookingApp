@@ -59,5 +59,11 @@
                     FontSize="Small"/>
             </Frame>
         </VerticalStackLayout>
+        <Image Aspect="AspectFill"
+            HeightRequest="160"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Source="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/saimiri.jpg"
+            WidthRequest="160"/>
     </VerticalStackLayout>
 </ContentPage>
