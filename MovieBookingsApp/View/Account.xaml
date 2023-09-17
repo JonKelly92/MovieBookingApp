@@ -59,10 +59,5 @@
                     FontSize="Small"/>
             </Frame>
         </VerticalStackLayout>
-        <Image Aspect="AspectFill"
-            HeightRequest="160"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Source="https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Best-Nicolas-Cage-Movies.jpg"/>
     </VerticalStackLayout>
 </ContentPage>
