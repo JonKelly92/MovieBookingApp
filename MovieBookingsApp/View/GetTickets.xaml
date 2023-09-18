@@ -12,11 +12,20 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="namespace:Movie">
                     <Image Aspect="AspectFill"
-                        Source="{Binding ImageURI}"
-                        WidthRequest="125"/>
+                        HeightRequest="160"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Source="{Binding ImageURI}"/>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        <Image Aspect="AspectFill"
+            HeightRequest="160"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Source="https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png"/>
+
+
         <!--<Label 
             Text="Movies and times listed here - clients can create bookings - Will likely need to be a Navigation Page"
             VerticalOptions="Center" 
@@ -25,6 +34,7 @@
             HeightRequest="160"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Source="https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png"/>-->
+            Source="https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png"/>
+        -->
     </VerticalStackLayout>
 </ContentPage>
