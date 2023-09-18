@@ -33,5 +33,25 @@
 		"Name": "The Meg 2",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png"
+	},
+		{
+		"Name": "The Nun 2",
+		"LengthMin": 0,
+		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Nun.png"
+	},
+		{
+		"Name": "Oppenheimer",
+		"LengthMin": 0,
+		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Oppenheimer.png"
+	},
+		{
+		"Name": "The Equalizer 3",
+		"LengthMin": 0,
+		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/TheEqualizer3.png"
+	},
+		{
+		"Name": "TMNT",
+		"LengthMin": 0,
+		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/TMNT.png"
 	}
 ]

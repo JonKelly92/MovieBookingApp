@@ -80,7 +80,9 @@ namespace MovieBookingsApp
         /// <returns></returns>
         public static async Task<List<Movie>> GetMovies()
         {
-            if(_httpClient == null)
+            // TODO call database 
+
+            if (_httpClient == null)
                 _httpClient = new HttpClient();
 
             if (_movieList.Count != 0)
@@ -92,67 +94,7 @@ namespace MovieBookingsApp
                 _movieList = await response.Content.ReadFromJsonAsync(MovieContext.Default.ListMovie);
             }
 
-            return _movieList;
-
-            // TODO call database 
-
-            //string baseURI = "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/";
-
-            //var movie = new Movie();
-            //movie.Name = "After Everything";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "AfterEverything.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "A Haunting in Venice";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "AHauntingInVenice.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "Barbie";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "Barbie.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "Demeter";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "Demeter.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "Grand Turismo";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "GrandTurismo.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "My Big Fat Greek Wedding 3";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "GreekWedding.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "The Meg 2";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "Meg2.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "The Nun 2";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "Nun.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "Oppenheimer";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "Oppenheimer.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "The Equalizer 3";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "TheEqualizer3.png";
-            //_movieList.Add(movie);
-
-            //movie.Name = "TMNT";
-            //movie.LengthMin = 0;
-            //movie.ImageURI = baseURI + "TMNT.png";
-            //_movieList.Add(movie);            
+            return _movieList;       
         }
 
         /// <summary>
