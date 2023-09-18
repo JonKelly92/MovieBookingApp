@@ -5,27 +5,23 @@
              xmlns:namespace="clr-namespace:MovieBookingsApp"
              x:DataType="namespace:GetTickets_ViewModel"
              Title="{Binding Title}">
-    <VerticalStackLayout>
+    <Grid>
         <CollectionView
             ItemsSource="{Binding Movies}"
             SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="namespace:Movie">
-                    <Image Aspect="AspectFill"
-                        HeightRequest="160"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Source="{Binding ImageURI}"/>
+                    <Grid Padding="10">
+                        <Image Aspect="AspectFill"
+                            HeightRequest="160"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Source="{Binding ImageURI}"/>
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Image Aspect="AspectFill"
-            HeightRequest="160"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Source="https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png"/>
-
-
+        
         <!--<Label 
             Text="Movies and times listed here - clients can create bookings - Will likely need to be a Navigation Page"
             VerticalOptions="Center" 
@@ -36,5 +32,5 @@
             VerticalOptions="Center"
             Source="https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png"/>
         -->
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>

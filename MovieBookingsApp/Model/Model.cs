@@ -92,6 +92,8 @@ namespace MovieBookingsApp
                 _movieList = await response.Content.ReadFromJsonAsync(MovieContext.Default.ListMovie);
             }
 
+            return _movieList;
+
             // TODO call database 
 
             //string baseURI = "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/";
@@ -150,9 +152,7 @@ namespace MovieBookingsApp
             //movie.Name = "TMNT";
             //movie.LengthMin = 0;
             //movie.ImageURI = baseURI + "TMNT.png";
-            //_movieList.Add(movie);
-
-            return _movieList;
+            //_movieList.Add(movie);            
         }
 
         /// <summary>
