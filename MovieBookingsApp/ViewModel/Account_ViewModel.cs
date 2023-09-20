@@ -47,7 +47,7 @@ namespace MovieBookingsApp
 
         // public Command GetAccountInfoCommand { get; }
 
-        public Account_ViewModel() 
+        public Account_ViewModel()
         {
             Title = "Account";
 
@@ -56,48 +56,32 @@ namespace MovieBookingsApp
 
         public void OnNavigatedTo()
         {
-            GetAccountInfoAsync();
+            RunMethodWithTryCatch(GetAccountInfoAsync, "Unable to display account info.");
         }
 
         private async void GetAccountInfoAsync()
         {
-            if (IsBusy) return;
-
-            try
+            if (!Model.IsSignedIn())
             {
-                IsBusy = true;
-
-                if(!Model.IsSignedIn()) 
-                {
-                    // TODO : ask user to sign in
-                }
-
-                _userinfo = await Model.GetUserInfo();
-
-                if (!string.IsNullOrEmpty(_userinfo.FirstName))
-                    FirstName = _userinfo.FirstName;
-                else
-                    FirstName = "None";
-
-                if(!string.IsNullOrEmpty(_userinfo.LastName)) 
-                    LastName = _userinfo.LastName;
-                else
-                    LastName = "None";
-
-                if(!string.IsNullOrEmpty(_userinfo.Email))
-                    Email = _userinfo.Email;
-                else
-                    Email = "None";
+                // TODO : ask user to sign in
             }
-            catch (Exception ex)
-            { 
-                Debug.WriteLine(ex);
-                await Shell.Current.DisplayAlert("Error", "Unable to display account info", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+
+            _userinfo = await Model.GetUserInfo();
+
+            if (!string.IsNullOrEmpty(_userinfo.FirstName))
+                FirstName = _userinfo.FirstName;
+            else
+                FirstName = "None";
+
+            if (!string.IsNullOrEmpty(_userinfo.LastName))
+                LastName = _userinfo.LastName;
+            else
+                LastName = "None";
+
+            if (!string.IsNullOrEmpty(_userinfo.Email))
+                Email = _userinfo.Email;
+            else
+                Email = "None";
         }
     }
 }

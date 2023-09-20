@@ -25,6 +25,8 @@ namespace MovieBookingsApp
 
     public static class Model
     {
+        private const string Branch = "Development_1";
+
         private static UserInfo _userInfo = new UserInfo();
         private static bool _isSignedIn;
 
@@ -88,7 +90,7 @@ namespace MovieBookingsApp
             if (_movieList.Count != 0)
                 _movieList.Clear();
 
-            var response = await _httpClient.GetAsync("https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/Movies.json");
+            var response = await _httpClient.GetAsync("https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/" + Branch + "/Movies.json");
             if (response.IsSuccessStatusCode)
             {
                 _movieList = await response.Content.ReadFromJsonAsync(MovieContext.Default.ListMovie);

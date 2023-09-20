@@ -35,7 +35,7 @@ namespace MovieBookingsApp
             }
         }
 
-        protected async void RunMethodWithTryCatch(Action method, string message = "An error occured.")
+        protected async void RunMethodWithTryCatch(Action method, string message = "An error occurred.")
         {
             if (IsBusy) return;
 

@@ -23,14 +23,6 @@ namespace MovieBookingsApp
 
         private async void GetMoviesAsync()
         {
-
-
-            //if (IsBusy) return;
-
-            //try
-            //{
-            //    IsBusy = true;
-
             var moviesList = await Model.GetMovies();
 
             if (Movies.Count != 0)
@@ -40,18 +32,6 @@ namespace MovieBookingsApp
             {
                 Movies.Add(movie);
             }
-
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    Debug.WriteLine(ex);
-            //    await Shell.Current.DisplayAlert("Error", "Unable to display movies", "OK");
-            //}
-            //finally
-            //{
-            //    IsBusy = false;
-            //}
         }
     }
 }
