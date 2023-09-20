@@ -1,5 +1,7 @@
 ﻿
 
+using System.Diagnostics;
+
 namespace MovieBookingsApp
 {
     public class BaseViewModel : BindableObject
@@ -30,6 +32,27 @@ namespace MovieBookingsApp
                 if(_title == value) return;
                 _title = value;
                 OnPropertyChanged();
+            }
+        }
+
+        protected async void RunMethodWithTryCatch(Action method, string message = "An error occured.")
+        {
+            if (IsBusy) return;
+
+            try
+            {
+                IsBusy = true;
+
+                method();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                await Shell.Current.DisplayAlert("Error", message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
     }

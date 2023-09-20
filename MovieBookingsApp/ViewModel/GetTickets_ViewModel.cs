@@ -18,36 +18,40 @@ namespace MovieBookingsApp
 
         public void OnNavigatedTo()
         {
-            GetMoviesAsync();
+            RunMethodWithTryCatch(GetMoviesAsync, "Unable to display movies.");
         }
 
         private async void GetMoviesAsync()
         {
-            if (IsBusy) return;
 
-            try
+
+            //if (IsBusy) return;
+
+            //try
+            //{
+            //    IsBusy = true;
+
+            var moviesList = await Model.GetMovies();
+
+            if (Movies.Count != 0)
+                Movies.Clear();
+
+            foreach (Movie movie in moviesList)
             {
-                IsBusy = true;
-
-                var moviesList = await Model.GetMovies();
-
-                if(Movies.Count != 0) 
-                    Movies.Clear();
-
-                foreach(Movie movie in moviesList)
-                {
-                    Movies.Add(movie);
-                }
+                Movies.Add(movie);
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-                await Shell.Current.DisplayAlert("Error", "Unable to display movies", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    Debug.WriteLine(ex);
+            //    await Shell.Current.DisplayAlert("Error", "Unable to display movies", "OK");
+            //}
+            //finally
+            //{
+            //    IsBusy = false;
+            //}
         }
     }
 }

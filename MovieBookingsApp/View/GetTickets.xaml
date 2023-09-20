@@ -10,14 +10,14 @@
             SelectionMode="None">
         <CollectionView.ItemsLayout>
             <GridItemsLayout Orientation="Vertical"
-                        Span="2" />
+                Span="2" />
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="namespace:Movie">
                 <VerticalStackLayout
-                    Padding="5">
+                    Padding="15">
                     <Image Aspect="AspectFill"
-                            HeightRequest="160"
+                            HeightRequest="260"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             Source="{Binding ImageURI}"/>
