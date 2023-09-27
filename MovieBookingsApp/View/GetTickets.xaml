@@ -7,7 +7,9 @@
              Title="{Binding Title}">
     <CollectionView
             ItemsSource="{Binding Movies}"
-            SelectionMode="None">
+            SelectionMode="Single"
+            SelectionChangedCommand="{Binding SelectMovieCommand}" 
+            SelectedItem="{Binding SelectedMovie}">
         <CollectionView.ItemsLayout>
             <GridItemsLayout Orientation="Vertical"
                 Span="2" />

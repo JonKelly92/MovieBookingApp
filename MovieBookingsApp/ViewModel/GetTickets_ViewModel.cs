@@ -9,11 +9,17 @@ namespace MovieBookingsApp
     {
         public ObservableCollection<Movie> Movies { get; }
 
+        public Movie SelectedMovie { get; set; }
+
+        public Command SelectMovieCommand { get; }
+
         public GetTickets_ViewModel()
         {
             Title = "Get Tickets";
 
             Movies = new ObservableCollection<Movie>();
+
+            SelectMovieCommand = new Command(SelectMovie);
         }
 
         public void OnNavigatedTo()
@@ -32,6 +38,11 @@ namespace MovieBookingsApp
             {
                 Movies.Add(movie);
             }
+        }
+
+        private void SelectMovie()
+        {
+            Console.WriteLine("Select Movie: " + SelectedMovie.Name);
         }
     }
 }
