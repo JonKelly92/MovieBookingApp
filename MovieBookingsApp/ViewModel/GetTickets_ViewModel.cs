@@ -40,9 +40,12 @@ namespace MovieBookingsApp
             }
         }
 
-        private void SelectMovie()
+        private async void SelectMovie()
         {
             Console.WriteLine("Select Movie: " + SelectedMovie.Name);
+
+            // TODO : when using the actual data base only pass the ID 
+            await Shell.Current.GoToAsync($"{nameof(MovieInfo)}?movieID={SelectedMovie.id}", true);
         }
     }
 }

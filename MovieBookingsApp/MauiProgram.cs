@@ -19,6 +19,10 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		return builder.Build();
+		// Transient means a new verion of this page will be created each time it's called 
+        builder.Services.AddTransient<MovieInfo_ViewModel>();
+        builder.Services.AddTransient<MovieInfo>();
+
+        return builder.Build();
 	}
 }

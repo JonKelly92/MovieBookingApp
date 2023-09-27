@@ -53,10 +53,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModel\" />
-	</ItemGroup>
-
-	<ItemGroup>
+	  <MauiXaml Update="View\MovieInfo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Account.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
