@@ -14,8 +14,12 @@ namespace MovieBookingsApp
                 if (_movieID == value) return;
 
                 _movieID = value;
-                OnPropertyChanged();
             }
+        }
+
+        public MovieInfo_ViewModel()
+        {
+            Title = "";
         }
 
         public void OnNavigatedTo()

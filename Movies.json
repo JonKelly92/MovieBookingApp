@@ -3,66 +3,88 @@
 		"id": 0,
 		"Name": "After Everything",
 		"LengthMin": 0,
-		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/AfterEverything.png"
+		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/AfterEverything.png",
+		"WideImageURI": "",
+		"Description": ""
 	},
 	{
 		"id": 1,
 		"Name": "A Haunting in Venice",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/AHauntingInVenice.png"
+		"WideImageURI": "",
+		"Description": ""
 	},
 	{
 		"id": 2,
 		"Name": "Barbie",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Barbie.png"
+		"WideImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/the-barbie-movie-1.jpg",
+		"Description": "Eccentric and individualistic, Barbie is exiled from Barbieland because of her imperfections. When her home world is in peril, Barbie returns with the knowledge that what makes her different also makes her stronger."
 	},
 	{
 		"id": 3,
 		"Name": "Demeter",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Demeter.png"
+		"WideImageURI": "",
+		"Description": ""
 	},
 	{
 		"id": 4,
 		"Name": "Grand Turismo",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/GrandTurismo.png"
+		"WideImageURI": "",
+		"Description": ""
 	},
 	{
 		"id": 5,
 		"Name": "My Big Fat Greek Wedding 3",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/GreekWedding.png"
+		"WideImageURI": "",
+		"Description": ""
 	},
 	{
 		"id": 6,
 		"Name": "The Meg 2",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png"
+		"WideImageURI": "",
+		"Description": ""
 	},
 	{
 		"id": 7,
 		"Name": "The Nun 2",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Nun.png"
+		"WideImageURI": "",
+		"Description": ""
 	},
 	{
 		"id": 8,
 		"Name": "Oppenheimer",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Oppenheimer.png"
+		"WideImageURI": "",
+		"Description": ""
 	},
 	{
 		"id": 9,
 		"Name": "The Equalizer 3",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/TheEqualizer3.png"
+		"WideImageURI": "",
+		"Description": ""
 	},
 	{
 		"id": 10,
 		"Name": "TMNT",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/TMNT.png"
+		"WideImageURI": "",
+		"Description": ""
 	}
 ]

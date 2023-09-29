@@ -8,7 +8,6 @@ public partial class MovieInfo : ContentPage
 	{
 		InitializeComponent();
 
-       // _viewModel = new MovieInfo_ViewModel();
        _viewModel = viewModel;
         BindingContext = _viewModel;
     }
@@ -18,6 +17,6 @@ public partial class MovieInfo : ContentPage
         base.OnNavigatedTo(args);
 
         // TODO : find a way to use binding instead? 
-       // _viewModel.OnNavigatedTo();
+        _viewModel.OnNavigatedTo();
     }
 }
