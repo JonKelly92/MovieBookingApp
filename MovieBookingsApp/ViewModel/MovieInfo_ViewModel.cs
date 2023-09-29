@@ -2,6 +2,16 @@
 
 namespace MovieBookingsApp
 {
+    public class ScreeningDate
+    {
+        public DateTime Date { get; set; }
+        public string DateString 
+        { 
+            get => Date.ToString("dddd MMMM dd");
+        }
+        public IList<DateTime> Times { get; set;}
+    }
+
     [QueryProperty(nameof(MovieObj), "Movie")]
     public class MovieInfo_ViewModel : BaseViewModel
     {
@@ -11,6 +21,9 @@ namespace MovieBookingsApp
         private string _title;
         private string _runtime;
         private IList<Screening> _screenings;
+        private IList<ScreeningDate> _screeningDates;
+        private IList<DateTime> _screeningTimes;
+        private ScreeningDate _selectedScreeningDate;
 
         public Movie MovieObj
         {
@@ -78,13 +91,39 @@ namespace MovieBookingsApp
             }
         }
 
-        public IList<Screening> Screenings
+        public IList<ScreeningDate> ScreeningDates
         {
-            get => _screenings;
+            get => _screeningDates;
             set
             {
-                _screenings = value;
+                _screeningDates = value;
                 OnPropertyChanged();
+            }
+        }
+
+        public IList<DateTime> ScreeningTimes
+        {
+            get => _screeningTimes;
+            set
+            {
+                // TODO : Bind this to a list of something that the user can select 
+
+                _screeningTimes = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ScreeningDate SelectedScreeningDate
+        {
+            get => _selectedScreeningDate;
+            set
+            {
+                if(value == _selectedScreeningDate) return;
+
+                _selectedScreeningDate = value;
+                OnPropertyChanged();
+
+                ScreeningTimes = value.Times;
             }
         }
 
@@ -95,21 +134,20 @@ namespace MovieBookingsApp
 
         private void GetMovieInfoAsync(int movieID)
         {
-            /*
+            _screenings = Model.GetScreeningList();
 
-            - Call the Screenings table using this id to get the day and times for screenings
-             
-            TODO : make this async && add try catch
-             
-            - Get the Screening info for this movie
-            - update picker with days the movie is playing
-            - show times for the day selected in the picker 
-             
-             */
+            List<DateTime> screeningDates = new List<DateTime>();
 
-            Screenings = Model.GetScreeningList();
+            foreach (var date in _screenings)
+            {
+                screeningDates.Add(date.StartTime);
+            }
 
-            // Need to pick days using the picker and then display times for that day 
+            var sortedList = screeningDates.OrderBy(dt => dt.Date).ToList();
+
+            ScreeningDates = sortedList.GroupBy(dt => dt.Date)
+                     .Select(g => new ScreeningDate { Date = g.Key, Times = g.ToList() })
+                     .ToList();
         }
 
         private string ConvertMovieLengthToString(int value)

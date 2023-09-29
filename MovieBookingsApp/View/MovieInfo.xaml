@@ -30,8 +30,9 @@
                 HorizontalOptions="Start"/>
             <Picker
                 Title="Select Date"
-                ItemsSource="{Binding Screenings}"
-                ItemDisplayBinding="{Binding StartTime}"/>
+                ItemsSource="{Binding ScreeningDates}"
+                ItemDisplayBinding="{Binding DateString}"
+                SelectedItem="{Binding SelectedScreeningDate}"/>
         </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
