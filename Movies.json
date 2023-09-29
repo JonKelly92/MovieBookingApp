@@ -19,7 +19,7 @@
 		"id": 2,
 		"Name": "Barbie",
 		"LengthMin": 0,
-		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Barbie.png"
+		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Barbie.png",
 		"WideImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/the-barbie-movie-1.jpg",
 		"Description": "Eccentric and individualistic, Barbie is exiled from Barbieland because of her imperfections. When her home world is in peril, Barbie returns with the knowledge that what makes her different also makes her stronger."
 	},
