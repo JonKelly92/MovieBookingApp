@@ -4,16 +4,16 @@
 		"Name": "After Everything",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/AfterEverything.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	},
 	{
 		"id": 1,
 		"Name": "A Haunting in Venice",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/AHauntingInVenice.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	},
 	{
 		"id": 2,
@@ -28,63 +28,63 @@
 		"Name": "Demeter",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Demeter.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	},
 	{
 		"id": 4,
 		"Name": "Grand Turismo",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/GrandTurismo.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	},
 	{
 		"id": 5,
 		"Name": "My Big Fat Greek Wedding 3",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/GreekWedding.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	},
 	{
 		"id": 6,
 		"Name": "The Meg 2",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Meg2.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	},
 	{
 		"id": 7,
 		"Name": "The Nun 2",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Nun.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	},
 	{
 		"id": 8,
 		"Name": "Oppenheimer",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/Oppenheimer.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	},
 	{
 		"id": 9,
 		"Name": "The Equalizer 3",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/TheEqualizer3.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	},
 	{
 		"id": 10,
 		"Name": "TMNT",
 		"LengthMin": 0,
 		"ImageURI": "https://raw.githubusercontent.com/JonKelly92/MovieBookingApp/Development_1/.github/images/TMNT.png",
-		"WideImageURI": "",
-		"Description": ""
+		"WideImageURI": "1",
+		"Description": "1"
 	}
 ]
