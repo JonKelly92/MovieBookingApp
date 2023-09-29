@@ -10,6 +10,8 @@ namespace MovieBookingsApp
         public string Name { get; set; }
         public int LengthMin { get; set; }
         public string ImageURI { get; set; }
+        public string WideImageURI { get; set; }
+        public string Description { get; set; }
     }
 
     [JsonSerializable(typeof(List<Movie>))]

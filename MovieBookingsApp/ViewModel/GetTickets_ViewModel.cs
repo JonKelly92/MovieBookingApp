@@ -45,7 +45,10 @@ namespace MovieBookingsApp
             Console.WriteLine("Select Movie: " + SelectedMovie.Name);
 
             // TODO : when using the actual data base only pass the ID 
-            await Shell.Current.GoToAsync($"{nameof(MovieInfo)}?movieID={SelectedMovie.id}", true);
+            await Shell.Current.GoToAsync($"{nameof(MovieInfo)}", true, new Dictionary<string, object>
+            {
+                {"Movie", SelectedMovie }
+            });
         }
     }
 }

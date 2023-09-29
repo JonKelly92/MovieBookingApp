@@ -18,7 +18,7 @@
             <DataTemplate x:DataType="namespace:Movie">
                 <VerticalStackLayout
                     Padding="15">
-                    <Image Aspect="AspectFill"
+                    <Image Aspect="AspectFit"
                             HeightRequest="260"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
