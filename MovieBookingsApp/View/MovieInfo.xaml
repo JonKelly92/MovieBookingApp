@@ -28,6 +28,10 @@
                 FontSize="Body"
                 TextColor="Black"
                 HorizontalOptions="Start"/>
+            <Picker
+                Title="Select Date"
+                ItemsSource="{Binding Screenings}"
+                ItemDisplayBinding="{Binding StartTime}"/>
         </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

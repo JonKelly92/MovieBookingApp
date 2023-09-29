@@ -17,10 +17,12 @@ namespace MovieBookingsApp
         }
     }
 
-    public struct Screening
+    public class Screening
     {
-        public Movie Movie;
-        public DateTime StartTime;
+        public string ID { get; set; }
+        public string FilmID { get; set; }
+        public string RoomID { get; set; }
+        public DateTime StartTime { get; set; }
     }
 
     public static class Model
@@ -96,18 +98,51 @@ namespace MovieBookingsApp
                 _movieList = await response.Content.ReadFromJsonAsync(MovieContext.Default.ListMovie);
             }
 
-            return _movieList;       
+            return _movieList;
         }
 
         /// <summary>
         /// Returns a list of Screening objects containing details about each screening.
         /// </summary>
         /// <returns></returns>
-        public static List<Screening> GetScreeningList()
+        public static IList<Screening> GetScreeningList()
         {
             if (_screeningList.Count == 0)
             {
                 // TODO : Fill up the list 
+
+                var screening = new Screening();
+
+                // 20th
+                screening.StartTime = new DateTime(2023, 8, 20, 14, 30, 0);
+                _screeningList.Add(screening);
+
+                var screening2 = new Screening();
+                screening2.StartTime = new DateTime(2023, 8, 20, 17, 0, 0);
+                _screeningList.Add(screening2);
+
+                var screening3 = new Screening();
+                screening3.StartTime = new DateTime(2023, 8, 20, 15, 30, 0);
+                _screeningList.Add(screening3);
+
+                //21st
+                var screening4 = new Screening();
+                screening4.StartTime = new DateTime(2023, 8, 21, 14, 0, 0);
+                _screeningList.Add(screening4);
+                //screening.StartTime = new DateTime(2023, 8, 21, 14, 30, 0);
+                //_screeningList.Add(screening);
+                //screening.StartTime = new DateTime(2023, 8, 21, 19, 30, 0);
+                //_screeningList.Add(screening);
+
+                ////23rd
+                var screening5 = new Screening();
+                screening5.StartTime = new DateTime(2023, 8, 23, 12, 30, 0);
+                _screeningList.Add(screening5);
+                //screening.StartTime = new DateTime(2023, 8, 23, 13, 45, 0);
+                //_screeningList.Add(screening);
+                //screening.StartTime = new DateTime(2023, 8, 23, 14, 30, 0);
+                //_screeningList.Add(screening);
+
             }
 
             return _screeningList;

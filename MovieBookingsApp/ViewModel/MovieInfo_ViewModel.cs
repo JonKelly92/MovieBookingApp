@@ -10,6 +10,7 @@ namespace MovieBookingsApp
         private string _description;
         private string _title;
         private string _runtime;
+        private IList<Screening> _screenings;
 
         public Movie MovieObj
         {
@@ -24,6 +25,8 @@ namespace MovieBookingsApp
                 Description = value.Description;
                 MovieTitle = value.Name;
                 RunTime = ConvertMovieLengthToString(value.LengthMin);
+
+                GetMovieInfoAsync(value.id);
             }
         }
 
@@ -75,36 +78,45 @@ namespace MovieBookingsApp
             }
         }
 
+        public IList<Screening> Screenings
+        {
+            get => _screenings;
+            set
+            {
+                _screenings = value;
+                OnPropertyChanged();
+            }
+        }
+
         public MovieInfo_ViewModel()
         {
             Title = "";
         }
 
-        public void OnNavigatedTo()
-        {
-            RunMethodWithTryCatch(GetMovieInfoAsync, "Unable to display movie info.");
-        }
-
-        private void GetMovieInfoAsync()
+        private void GetMovieInfoAsync(int movieID)
         {
             /*
 
             - Call the Screenings table using this id to get the day and times for screenings
              
-            TODO :
+            TODO : make this async && add try catch
              
             - Get the Screening info for this movie
             - update picker with days the movie is playing
             - show times for the day selected in the picker 
              
              */
+
+            Screenings = Model.GetScreeningList();
+
+            // Need to pick days using the picker and then display times for that day 
         }
 
         private string ConvertMovieLengthToString(int value)
         {
             var time = TimeSpan.FromMinutes(value);
 
-            return time.TotalHours + "H " + time.Minutes + "M";
+            return time.Hours + "H " + time.Minutes + "M";
         }
     }
 }

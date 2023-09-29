@@ -15,8 +15,5 @@ public partial class MovieInfo : ContentPage
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
         base.OnNavigatedTo(args);
-
-        // TODO : find a way to use binding instead? 
-        _viewModel.OnNavigatedTo();
     }
 }
