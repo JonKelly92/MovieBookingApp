@@ -37,7 +37,7 @@
                       SelectedItem="{Binding SelectedScreenTime}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding ., StringFormat='{0:t}'}" />
+                        <TextCell x:DataType="namespace:Screening" Text="{Binding StartTime, StringFormat='{0:t}'}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

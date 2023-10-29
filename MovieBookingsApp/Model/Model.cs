@@ -1,4 +1,5 @@
 ﻿
+using System.ComponentModel;
 using System.Net.Http.Json;
 
 namespace MovieBookingsApp
@@ -17,7 +18,7 @@ namespace MovieBookingsApp
         }
     }
 
-    public class Screening
+    public class Screening : BindableObject
     {
         public string ID { get; set; }
         public string FilmID { get; set; }
@@ -114,6 +115,9 @@ namespace MovieBookingsApp
                 var screening = new Screening();
 
                 // 20th
+                screening.ID = "1 test";
+                screening.FilmID = "2 test";
+                screening.RoomID = "3 test";
                 screening.StartTime = new DateTime(2023, 8, 20, 14, 30, 0);
                 _screeningList.Add(screening);
 
@@ -158,12 +162,13 @@ namespace MovieBookingsApp
             if (!_isSignedIn)
             {
                 // TODO : Notify the user they should log in 
-                return false;
+                //return false;
             }
 
             if (_bookings.Contains(screening))
             {
                 // TODO : Notifiy the user they already created this booking
+                Shell.Current.DisplayAlert("Oops", "You have already created that booking.", "OK");
                 return false;
             }
 
@@ -176,8 +181,17 @@ namespace MovieBookingsApp
         /// Returns a list of Screenings the user has booked. 
         /// </summary>
         /// <returns></returns>
-        public static List<Screening> GetBookings()
+        public static IList<Screening> GetBookings()
         {
+            // TODO DEBUG
+            //Screening screening = new Screening();
+            //screening.ID = "1 test";
+            //screening.FilmID = "2 test";
+            //screening.RoomID = "3 test";
+            //screening.StartTime = new DateTime(2023, 8, 20, 14, 30, 0);
+            //_bookings.Add(screening);
+            // 
+
             return _bookings;
         }
     }

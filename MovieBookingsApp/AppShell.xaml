@@ -6,12 +6,12 @@
     xmlns:local="clr-namespace:MovieBookingsApp"
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
+        <ShellContent Title="Get Tickets"
+                    ContentTemplate="{DataTemplate local:GetTickets}" />
         <ShellContent Title="Bookings"
                     ContentTemplate="{DataTemplate local:Bookings}" />
         <ShellContent Title="Sign Up"
                     ContentTemplate="{DataTemplate local:SignUp}" />
-        <ShellContent Title="Get Tickets"
-                    ContentTemplate="{DataTemplate local:GetTickets}" />
         <ShellContent Title="Account"
                     ContentTemplate="{DataTemplate local:Account}" />
     </TabBar>

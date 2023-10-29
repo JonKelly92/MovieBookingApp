@@ -5,11 +5,12 @@ namespace MovieBookingsApp
     public class ScreeningDate
     {
         public DateTime Date { get; set; }
-        public string DateString 
-        { 
+        public string DateString
+        {
             get => Date.ToString("dddd MMMM dd");
         }
-        public IList<DateTime> Times { get; set;}
+        public IList<DateTime> Times { get; set; }
+        public IList<Screening> Screenings { get; set; }
     }
 
     [QueryProperty(nameof(MovieObj), "Movie")]
@@ -20,11 +21,10 @@ namespace MovieBookingsApp
         private string _description;
         private string _title;
         private string _runtime;
-        private IList<Screening> _screenings;
         private IList<ScreeningDate> _screeningDates;
-        private IList<DateTime> _screeningTimes;
+        private IList<Screening> _screeningTimes;
         private ScreeningDate _selectedScreeningDate;
-        private DateTime _selectedScreeningTime;
+        private Screening _selectedScreeningTime;
 
         #region Properties
 
@@ -104,13 +104,11 @@ namespace MovieBookingsApp
             }
         }
 
-        public IList<DateTime> ScreeningTimes
+        public IList<Screening> ScreeningTimes
         {
             get => _screeningTimes;
             set
             {
-                // TODO : Bind this to a list of something that the user can select 
-
                 _screeningTimes = value;
                 OnPropertyChanged();
             }
@@ -121,21 +119,26 @@ namespace MovieBookingsApp
             get => _selectedScreeningDate;
             set
             {
-                if(value == _selectedScreeningDate) return;
+                if (value == _selectedScreeningDate) return;
 
                 _selectedScreeningDate = value;
                 OnPropertyChanged();
 
-                ScreeningTimes = value.Times;
+                ScreeningTimes = value.Screenings;
             }
         }
 
-        public DateTime SelectedScreenTime
+        public Screening SelectedScreenTime
         {
             get => _selectedScreeningTime;
             set
             {
-                Console.WriteLine("Test : " + value);
+                if (value == _selectedScreeningTime) return;
+
+                _selectedScreeningTime = value;
+                OnPropertyChanged();
+
+                CreateBookingAsync(_selectedScreeningTime);
             }
         }
 
@@ -146,21 +149,26 @@ namespace MovieBookingsApp
             Title = "";
         }
 
+        private void CreateBookingAsync(Screening screening)
+        {
+            if (Model.CreateBooking(screening))
+            {
+                Shell.Current.DisplayAlert("Booked", "Successfully created a booking for " + screening.StartTime.ToString("dddd MMMM dd") + " at " + screening.StartTime.ToString("hh:mm tt"), "OK");
+            }
+            else 
+            {
+                Shell.Current.DisplayAlert("Oops", "Failed to create the booking", "OK");
+            }
+        }
+
         private void GetMovieInfoAsync(int movieID)
         {
-            _screenings = Model.GetScreeningList();
+            var rawScreeningList = Model.GetScreeningList();
 
-            List<DateTime> screeningDates = new List<DateTime>();
+            var sortedScreeningList = rawScreeningList.OrderBy(dt => dt.StartTime.Date).ToList();
 
-            foreach (var date in _screenings)
-            {
-                screeningDates.Add(date.StartTime);
-            }
-
-            var sortedList = screeningDates.OrderBy(dt => dt.Date).ToList();
-
-            ScreeningDates = sortedList.GroupBy(dt => dt.Date)
-                     .Select(g => new ScreeningDate { Date = g.Key, Times = g.ToList() })
+            ScreeningDates = sortedScreeningList.GroupBy(dt => dt.StartTime.Date)
+                     .Select(g => new ScreeningDate { Date = g.Key, Screenings = g.ToList() })
                      .ToList();
         }
 
