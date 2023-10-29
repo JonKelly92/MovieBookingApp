@@ -24,6 +24,9 @@ namespace MovieBookingsApp
         private IList<ScreeningDate> _screeningDates;
         private IList<DateTime> _screeningTimes;
         private ScreeningDate _selectedScreeningDate;
+        private DateTime _selectedScreeningTime;
+
+        #region Properties
 
         public Movie MovieObj
         {
@@ -126,6 +129,17 @@ namespace MovieBookingsApp
                 ScreeningTimes = value.Times;
             }
         }
+
+        public DateTime SelectedScreenTime
+        {
+            get => _selectedScreeningTime;
+            set
+            {
+                Console.WriteLine("Test : " + value);
+            }
+        }
+
+        #endregion
 
         public MovieInfo_ViewModel()
         {

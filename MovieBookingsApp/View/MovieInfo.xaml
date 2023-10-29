@@ -33,6 +33,14 @@
                 ItemsSource="{Binding ScreeningDates}"
                 ItemDisplayBinding="{Binding DateString}"
                 SelectedItem="{Binding SelectedScreeningDate}"/>
+            <ListView ItemsSource="{Binding ScreeningTimes}"
+                      SelectedItem="{Binding SelectedScreenTime}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding ., StringFormat='{0:t}'}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
