@@ -115,9 +115,9 @@ namespace MovieBookingsApp
                 var screening = new Screening();
 
                 // 20th
-                screening.ID = "1 test";
-                screening.FilmID = "2 test";
-                screening.RoomID = "3 test";
+                screening.ID = "ID";
+                screening.FilmID = "FilmID";
+                screening.RoomID = "RoomID";
                 screening.StartTime = new DateTime(2023, 8, 20, 14, 30, 0);
                 _screeningList.Add(screening);
 
